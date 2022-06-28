@@ -1,0 +1,12 @@
+LANDING PAGE- ROHAN: https://www.ikea.com/
+PRODUCT PAGE - SOBEBAR :  https://www.ikea.com/in/en/?ref=gwp-start
+LOGIN PAGE - ABHISHEK : https://in.accounts.ikea.com/login?state=hKFo2SBsMHlHMTZMLWZ4RFJxdTQ1SkhfWmV5TGtzS2FMUnpVaqFupWxvZ2luo3RpZNkgS3I0bjRtOVFpMGFzRVdrRUdPcm1tZ1gxck5qaVJzOTWjY2lk2SBQeFZ2SFp1SmFwRWp6T3NEWFlheE5YcjVtNXIyWlE1cw&client=PxVvHZuJapEjzOsDXYaxNXr5m5r2ZQ5s&protocol=oauth2&redirect_uri=https%3A%2F%2Fwww.ikea.com%2Fin%2Fen%2Fprofile%2Flogin%2F&response_type=code&ui_locales=en-IN&code_chalenge=kAW2T8jcBnWzYsDbSEIrgRtWsgEo-cEGXIjNs4_MvlM&code_chalenge_method=S256&scope=openid%20profile%20email&audience=https%3A%2F%2Fretail.api.ikea.com&registration=%7B%7D&consumer=OWF&auth0Client=eyJuYW1lIjoiYXV0aDAuanMiLCJ2ZXJzaW9uIjoiOS4xOS4wIn0%3D
+OUR STORES - GAURAV: https://www.ikea.com/in/en/stores/
+
+font-family: "Noto IKEA","Noto Sans","Roboto","Open Sans",-apple-system,sans-serif;
+
+add,commit, push
+
+1. git add .
+2. git commit -m"added landing page"
+3. git push orgin landing

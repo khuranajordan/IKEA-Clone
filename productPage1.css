@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 :root{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: "Noto IKEA","Noto Sans","Roboto","Open Sans",-apple-system,sans-serif;
 }
 
 
@@ -37,6 +36,7 @@ p{
     padding: 12px 25px;
     margin-bottom: 12px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 /* Trending Product */
@@ -125,6 +125,11 @@ p{
     width: 380px;
 }
 
+.categories a{
+    text-decoration: none;
+}
+
+
 
 
 .category1{
@@ -136,6 +141,10 @@ p{
 
 .category1 h1{
     padding: 0px 20px;
+}
+
+.category1 h1:hover{
+    text-decoration: underline;
 }
 
 
@@ -161,6 +170,10 @@ p{
     font-size: 30px;
 }
 
+.category2 h1:hover{
+    text-decoration: underline;
+}
+
 
 .category2 p{
     padding: 0px 20px;
@@ -184,6 +197,9 @@ p{
     font-size: 30px;
 }
 
+.category3 h1:hover{
+    text-decoration: underline;
+}
 
 .category3 p{
     padding: 0px 20px;
@@ -254,3 +270,44 @@ p{
     width: 580px;
 }
 
+/* Return policy, click&collect, Planning tools, safety at IKEA  */
+.basicInfo{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 3px;
+    margin: 80px 20px 60px 120px;
+}
+
+.returnPolicy,.clickAndCollect,.planningTools,.safety{
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 25px 50px;
+}
+
+
+/* Important info */
+.importantInfo{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin-left: 120px;
+    margin-right: 50px;
+}
+
+.importantInfo img{
+    width: 580px;
+}
+
+.covid19{
+    grid-column: 1;
+}
+
+.importantInfo button{
+    background-color: black;
+    border-radius: 25px;
+    padding: 12px 25px;
+    margin-bottom: 12px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}

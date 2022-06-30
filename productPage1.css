@@ -311,3 +311,90 @@ p{
     font-size: 12px;
     cursor: pointer;
 }
+
+/* explore */
+.explore{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    margin-left: 120px;
+    margin-right: 50px;
+}
+
+.exploreInfo{
+    grid-column: 1;
+}
+
+.fewLinks{
+    grid-column: 2;
+}
+
+.fewLinks a{
+    color: #484848;
+}
+
+/* footer */
+.footer{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 50px;
+    background-color: #f5f5f5;
+    padding: 50px 0px;
+}
+
+.footer a{
+    color: #484848;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+
+.join{
+    grid-column: 1;
+    margin-left: 120px;
+}
+
+.join button{
+    background-color: black;
+    color: rgba(255, 255, 255, 0.952);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.family{
+    grid-column: 2;
+}
+
+.services{
+    grid-column: 3;
+}
+
+.help{
+    grid-column: 4;
+}
+
+.about{
+    grid-column: 5;
+    margin-right: 150px;
+}
+
+.social{
+    margin-top: 150px;
+}
+.country{
+    margin-top: 180px;
+}
+
+.country button{
+    background-color: #f5f5f5;
+    color: #484848;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}

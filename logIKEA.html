@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            min-height:800px ;
+        }
+        .arrow{
+            font-size:26px;
+            color: white;
+        }
+      .fir{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 40%;
+        background-color: rgb(13, 144, 220);
+        position: relative;
+
+      }
+      .fir div:first-child{
+        margin-top:25px;
+      }
+      .fir>div{
+        margin-left: 0px;
+      }
+      .img{
+        position: absolute;
+        top:30px;
+        margin-left: 10px;
+      }
+      button{
+        height: 40px;
+        width: 40px;
+        border: 0;
+        border-radius: 50rem;
+        background: transparent;
+        cursor: pointer;
+      }
+      
+      .sec{
+        position: relative;
+
+      }
+      .sec div{
+        position: absolute;
+       margin-left: 80px;
+       top: 8%;
+      }
+      
+      input[type="text"],input[type="password"]{
+        display: block;
+        min-width:30vw;
+        line-height: 35px;
+        margin-bottom: 15px;
+      }
+      input[type="text"],input[type="password"]:hover{
+        border: 2px solid red;
+      }  
+      .otp{
+        font-weight:bold;
+        text-decoration: underline;
+        color: rgb(69, 59, 59);
+      }
+      .otp:hover{
+        color: rgb(0, 0, 0);
+      }
+      p{
+        margin-bottom: 20px;
+      }
+     .sub{
+        display: block;
+        background-color: teal;
+        min-width:30vw;
+        height:50px;
+        margin-top: 50px;
+        border: 0;
+        border-radius: 15rem;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 70px;
+     }
+     .l1btn{
+        display: block;
+        background:transparent;
+        min-width:30vw;
+        height:50px;
+        margin-top: 20px;
+        border: 1px solid black;
+        border-radius: 15rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+     }
+     .l1btn:hover{
+        border: 2px solid black;
+     }
+     .blo{
+        display: block;
+        
+        width: 100%;
+        background:transparent;
+        position: absolute;
+        top:250px;
+        
+        color: white;
+      }
+      .blo h1,p{
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+      .footer{
+        display: block;
+        
+        width: 100%;
+        background:transparent;
+        position: absolute;
+        bottom:25px;
+        color: white;
+        font-size: 13px;
+      }
+      .footer a{
+        color: white;
+      }
+      .pop{
+        font-size: 12px;
+        color: red;
+        padding-left: 0px;
+      }
+      h4>a{
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="fir">
+          <div><button> <span class="arrow">&#8592;</span></button></div>
+          <div>  <img class="img" src="https://in.accounts.ikea.com/resources/static/logo.svg" alt="logo"></div>
+
+          <div class="blo">
+            <h1><span style="color:rgb(237, 237, 16);">Login</span> to your IKEA account.</h1><br/>
+            <p style="margin-bottom:5px;">Too many passwords?</p>
+            <p>You can now login with an OTP we will send on your email address or verified mobile number.</p>
+            <br/>
+            <p>Access your IKEA account using your email address to add and verify your mobile number.</p>
+          </div>
+          
+          <div class="footer">
+            <p>IKEA.in - <a href="#">Cookie Policy</a> and <a href="#">Privacy Policy</a></p>
+            <p>© Inter IKEA Systems B.V. 1999-2022</p>
+          </div>
+        </div>
+
+
+
+
+        
+        <div class="sec">
+            <div class="login">
+            <label>Email or Verified Mobile Number</label><br/>
+            <input type="text" class="nameBox">
+            <p class="pop"><i class="fa-solid fa-circle-exclamation"></i>Please enter your Email or Verified mobile number to continue.</p>
+            <p>Login <a href="#" class="otp"> with an OTP</a></p>
+            <label class="lab2">Password</label><br/>
+            <input type="password" class="password">
+            <a href="#" class="otp">Forgot your password?</a>
+            <button  class="sub">Continue</button>
+
+            <h4>Do you have an IKEA account?<a href="C:\Users\ASUS\Documents\GitHub\constructWeek\cons\log.html"> Create one now:</a></h4>
+
+                <button class="l1btn">I'm buying for my home</button>
+                <button class="l1btn">I'm buying for my company</button>
+
+
+            </div>
+            
+        </div>
+       
+
+    </div>
+ 
+</body>
+</html>
+<script>
+
+</script>
+
+<script>
+  document.querySelector(".sub").addEventListener("click",cred);
+  function cred(){
+    var mobile=document.querySelector(".nameBox").value;
+    var pass=document.querySelector(".password").value;
+    console.log(mobile,pass);
+    
+    var Arrayy=JSON.parse(localStorage.getItem(List));
+   var result=Arrayy.map(function(el){
+    return el;
+   });
+   console.log(Arrayy);
+
+    
+
+}
+  
+</script>
+
+<script src="https://kit.fontawesome.com/e1c0e81e9a.js" crossorigin="anonymous"></script>

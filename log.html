@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-image: linear-gradient(rgba(55, 82, 116, 0.1),rgba(55, 82, 116, 0.2)),url(https://images.unsplash.com/photo-1535182463927-440364075d9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHN1cmZlcnxlbnwwfHwwfHw%3D&w=1000&q=80) ;
+            background-size: cover;
+           
+            
+            
+        }
+        .login{
+            background-color: black;
+            margin-top: 200px;
+            width:30vw;
+            height: auto;
+            background-color: rgb(54, 50, 50);
+            opacity: 0.8;
+            color: aliceblue;
+            
+            left: 50%;
+            display: flex;
+            flex: 0 0 1;
+            position: absolute;
+            box-sizing: border-box;
+            transform: translate(-50%,-50%);
+            padding: 70px 30px;
+            box-shadow: 2px 2px 20px gray;
+            margin-top: auto;
+            border: 1px solid black;
+        }
+        .avatar{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            top: -50px;
+            left: calc(50% - 50px);
+            position: absolute;
+            
+        }
+        form label{
+          padding: 0px;
+          margin: 2px;
+          font-weight: bold;
+          
+        }
+        input{
+            width: 100%;
+            margin-bottom: 20px;
+            
+        }
+        form input[type="text"],input[type="password"],input[type="tel"]{
+            border: none;
+            background: transparent;
+            border-bottom: 1px solid whitesmoke;
+            outline: none;
+            height: 40px;
+            color: white;
+            font-size: 16px;
+            
+        }
+
+        input[type="submit"]{
+            border: none;
+            color: white;
+            background-color: red;
+            height: 40px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        input[type="submit"]:hover{
+            background-color: green;
+            color: aliceblue;
+            cursor: pointer;
+            padding-bottom:40px ;
+        }
+
+        a{
+            text-decoration: none;
+            color:rgb(148, 146, 146);
+            font-size: 16px;
+            line-height: 30px;
+            padding-bottom: 10px;
+        }
+        a:hover{
+            color:white;
+        }
+        form input[type="text"],input[type="password"],input[type="tel"]:focus{
+            border-bottom-color: rgb(151, 150, 143);
+            box-shadow: 5px 5px 10px rgba(116, 107, 37, 0.5); 
+        }
+        #otp{
+            text-decoration: underline;
+            color: #d8cccc;
+            font-weight: bold;
+            padding-bottom:10px ;
+        }
+        #otp:hover{
+            color: white;
+        }
+        #logo{
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 0px;
+            left: 5px;
+            
+        }
+       .hui{
+        width: 100%;
+        background-color: red;
+        height: 400px;
+       }
+    </style>
+</head>
+<body>
+    <img src="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg" id="logo">
+<div class="hui"></div>
+    <div class="login">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzwLEC4tFDM86BGIhL8ZordejtzyqM60wDDlyLrdEdbHUfV3lBIGyIMFx4mc0nIBahFP4&usqp=CAU" class="avatar">
+        <form>
+            <label>Name</label><br/>
+            <input type="text" id="name" placeholder="Enter name">
+            
+            <label>Username</label><br/>
+            <input type="text" id="username" placeholder="Enter username">
+
+            <label>Mobile Number</label><br/>
+            <input type="tel" id="number" placeholder="Mobile-number">
+
+            <label> Generate Password</label><br/>
+            <input type="password" id="password" placeholder="Enter password">
+            
+            <input type="submit" id="submit" ><br/>
+
+            <!--<a href="#" target="_blank" id="otp">Login with OTP</a><br/>
+            <a href="#" target="_blank" id="forgotPass">Forgot Password</a><br/>
+            <a href="#" target="_blank" id="forgotPass">Sign Up</a><br/> -->
+        </form>
+    
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",createList);
+
+    function createList(){
+        var Arrayy=JSON.parse(localStorage.getItem("List")) || [];
+        var signUpObj={
+            name : document.querySelector("#name").value,
+            username : document.querySelector("#username").value,
+            number : document.querySelector("#number").value,
+            password : document.querySelector("#password").value,
+        }
+        Arrayy.push(signUpObj);
+
+        localStorage.setItem("List",JSON.stringify(Array));
+        console.log(Array);
+    }
+    
+
+</script>

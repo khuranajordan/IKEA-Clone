@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item page</title>
+    <script src="https://kit.fontawesome.com/08c28915a2.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg" type="image/x-icon">
+
+    <style>
+
+* navbar */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+}
+nav {
+  background:white;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.logo{
+  margin-left: 30px;
+}
+.logo a:hover {
+  text-decoration: none;
+}
+.menu li {
+  font-size: 16px;
+  padding: 15px 5px;
+  white-space: nowrap;
+}
+.logo a,
+.toggle a {
+  font-size: 20px;
+}
+.button.secondary {
+  border-bottom: 1px #444 solid;
+}
+
+/* Mobile menu */
+
+#box{
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  padding-left: 20px;
+  color: white;
+  margin-left: 20px;
+
+}
+#search{
+  margin: auto;
+  height: 40px;
+  width: 30%;
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.034);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+  
+
+}
+#search:hover{
+  background-color: rgba(128, 128, 128, 0.8);
+}
+.sbtn{
+ background: transparent;
+ outline: none;
+ border: none;
+ border-radius: 50%;
+ cursor: pointer;
+ padding-right: 10px;
+}
+.sbtn img{
+  position: relative;
+  top: 4px;
+  height: 20px;
+  width: 20px;
+}
+::placeholder{
+  color: white;
+}
+
+.item {
+  
+  text-align: center;
+  order: 3;
+  
+}
+.item.active {
+  display: block;
+}
+
+/* Navbar Toggle */
+ .toggle {
+  cursor:pointer;
+}
+.bars {
+  background: #999;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.bars:before,
+.bars:after {
+  background: #999;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.bars:before {
+  top: 5px;
+}
+.bars:after {
+  top: -5px;
+}
+
+
+/* Tablet menu */
+ @media all and (min-width: 468px) {
+  .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+  }
+  .logo{
+      order:0;
+      flex: 2;
+     }
+     .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+  }
+  #search{
+      display: none;
+  }
+
+ 
+  .item.button.hej{
+      display: none;
+  }
+ 
+  .toggle {
+      order: 3;
+      margin-left: 20px;
+    }
+  
+  
+  } 
+ 
+
+/* Desktop menu */
+ @media all and (min-width: 768px) {
+  .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo{
+      order:1;
+      flex: 0;
+    }
+    .item.button.hej{
+      display: inline-block;
+  }
+  .toggle{
+      order: 0;
+      margin-right:20px ;
+  }
+  
+    #search{
+      order: 2;
+      flex: 2;
+    }
+  #search{
+      display:flex;
+  }
+   
+    .item.button {
+      order: 3;
+      margin-left: 20px;
+  
+    }
+  }
+
+
+
+
+        #container {
+            display: grid;
+            grid-template-columns: 70% 30%;
+            grid-template-rows: auto;
+            gap: 0px;
+            margin: 0px 100px;
+        }
+
+        #products {
+            /* border:1px red solid; */
+
+
+        }
+
+        #filter {
+            /* border: 1px red solid; */
+            /* padding: 20px; */
+
+        }
+
+        #item {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        #item>img {
+            height: 500px;
+            width: 400px;
+            gap: 20px;
+        }
+
+        #f1 {
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        #cart {
+            display: flex;
+            font-weight: bold;
+            align-items: center;
+            height: 40px;
+            width: 150px;
+            font-size: 10px;
+            text-align: center;
+
+
+        }
+
+
+        button {
+            margin-left: 80px;
+            border-radius: 15px;
+            background-color: #0058a3;
+            /* text-decoration: none; */
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            /* background-color: rgb(96, 96, 206); */
+        }
+
+        h3 {
+            color: rgba(90, 88, 88, 0.954);
+            font-size: 25px;
+            width: 450px;
+        }
+
+        h5 {
+            font-size: 15px;
+        }
+
+        #box {
+            display: flex;
+            font-weight: bold;
+            font-size: 10px;
+            padding: 10px;
+            width: 50px;
+            background-color: black;
+            color: aliceblue;
+        }
+
+            /* footer */
+    .footer{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 50px;
+        background-color: #f5f5f5;
+        padding: 50px 0px;
+    }
+
+    .footer a{
+        color: #484848;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .footer a:hover{
+        text-decoration: underline;
+    }
+
+
+    .join{
+        grid-column: 1;
+        margin-left: 120px;
+    }
+
+    .join button{
+        background-color: black;
+        color: rgba(255, 255, 255, 0.952);
+        font-weight: bold;
+        padding: 10px;
+        margin: 0px 0px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .family{
+        grid-column: 2;
+    }
+
+    .services{
+        grid-column: 3;
+    }
+
+    .help{
+        grid-column: 4;
+    }
+
+    .about{
+        grid-column: 5;
+        margin-right: 50px;
+    }
+
+    .social{
+        margin-top: 150px;
+    }
+    .country{
+        margin-top: 180px;
+        margin-right: 100px;
+    }
+
+    .country button{
+        background-color: #f5f5f5;
+        color: #484848;
+        border-radius: 20px;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+
+    .lastFooter{
+        display: flex;
+        justify-content: space-between;
+        background-color: #f5f5f5;
+    }
+
+    .lastFooter p {
+        font-size: 12px;
+        margin-left: 120px;
+    }
+
+    .links{
+        display: flex;
+        align-items: center;
+        margin-right: 100px;
+    }
+
+    .links a{
+        color: #484848;
+        text-decoration: none;
+        margin: 10px;
+        font-size: 12px;
+    }
+        
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul class="menu">
+            <li class="toggle"><span class="bars"></span></li>
+            <li class="logo"><a href="#"><img src="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg"></a></li>
+            <li class="item" id="search">
+                <form>
+                    <button class="sbtn"><img src="C:\Users\ASUS\Desktop\search.png"></button>
+                    <input type="text" placeholder="search" id="box">
+                </form>
+                <button class="sbtn"><i class="fa-solid fa-camera"></i></button>
+            </div>
+            </li>
+            <li class="item button hej"><a href="#"><i class="fa-solid fa-user"></i><h5 style="display: inline-block; padding-left:10px">Hej! Login or Sign Up</h5></a></li>
+            
+            <li class="item button"><a href="#"><i class="fa-solid fa-truck"></i></a></li>
+            <li class="item button secondary"><a href="#"><i class="fa-solid fa-basket-shopping"></i></a></li>
+            
+        </ul>
+    </nav>
+
+
+
+
+    <div id="container">
+        <div id="products">
+            <div id="item">
+                <img src="https://www.ikea.com/in/en/images/products/raskog-trolley-white__0503386_pe632627_s5.jpg?f=s"
+                    alt="">
+                <img src="https://www.ikea.com/in/en/images/products/raskog-trolley-white__1134462_pe878783_s5.jpg?f=s"
+                    alt="">
+                <img src="https://www.ikea.com/in/en/images/products/raskog-trolley-white__0870535_pe644566_s5.jpg?f=s"
+                    alt="">
+
+
+            </div>
+
+            <h3>This trolley fits in the smallest of
+                spaces and can be moved to wherever you need it.
+                Use it as extra storage for all your kitchen utensils,
+                desk accessories or for gloves, keys and mobile phones.</h3>
+
+            <h5>Delivery and assembly prices not included.</h5>
+
+            <h5>Article number</h5>
+
+            <div id="box">703.767.21</div>
+
+            <hr>
+
+            <h1> <a href="#" style="color: black; font-size: 30px;"> Product details > </a> </h1>
+            <hr>
+            <h1> <a href="#" style="color: black; font-size: 30px;"> Measurements > </a> </h1>
+            <hr>
+            <h1> <a href="#" style="color: black; font-size: 30px;"> Reviews > </a> </h1>
+
+        </div>
+        <div id="filter">
+            <div id="f1">
+                <p style="font-size: 25px; font-weight: bold;">RÅSKOG</p>
+                <p style="font-size: 15px; font-weight: bold;">Rs.2,190</p>
+            </div>
+            <div style="font-size: 15px; margin-left:80px; width: 200px;">
+                Trolley, white, 35x45x78 cm (13 3/4x17 3/4x30 3/4 ")
+            </div>
+            <br>
+            <div style="font-size: 15px; margin-left:80px; width: 100px;">
+                Price incl. of all taxes
+            </div>
+            <br>
+            <hr style="width: 200px;">
+            <br>
+
+
+            <div style="font-size: 15px; margin-left:80px; width: 150px;">
+                Please enter the pin code to check the home delivery availability.
+            </div>
+            <br>
+            <br>
+            <div>
+                <button style="padding-left: 40px;" id="cart"><a href="#">Add to cart</a>
+
+                </button>
+                
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="join">
+            <h3>Join IKEA Family</h3>
+            <p>Get Rs.500 off* on your first purchase. Also enjoy guaranteed discounts, special previews, food offers and much more. It’s free and only takes a minute to join. *T&Cs apply.</p>
+            <button>Join us</button>
+            <h3>IKEA for Business</h3>
+            <p>Our business & design experts help you with flexible, affordable and sustainable solutions. Create a better life at work with us.</p>
+            <button>Join now</button>
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-facebook fa-2x "></i></a>
+                <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube fa-2x"></i></a>
+            </div>
+        </div>
+        <div class="family">
+            <h4>IKEA Family</h4>
+            <div><a href="#">Log in</a></div><br>
+            <div><a href="#">Join IKEA family</a></div><br>
+            <div><a href="#">Member offer</a></div><br>
+            <a href="#">Workshop & event</a>
+        </div>
+        <div class="services">
+            <h4>Services</h4>
+            <div><a href="#">Design your room</a></div><br>
+            <div><a href="#">Delivery Service</a></div><br>
+            <div><a href="#">Installation Service</a></div><br>
+            <div><a href="#">Assembly Service</a></div><br>
+            <div><a href="#">Kitchen Planning</a></div><br>
+            <div><a href="#">Measuring Service</a></div><br>
+            <div><a href="#">Customer Service</a></div><br>
+            <div><a href="#">Recycle Program</a></div><br>
+            <div><a href="#">Track Your Order</a></div><br>
+        </div>
+        <div class="help">
+            <h4>Help</h4>
+            <div><a href="#">How to shop</a></div><br>
+            <div><a href="#">Return policy</a></div><br>
+            <div><a href="#">Prices and price tags</a></div><br>
+            <div><a href="#">Contact us</a></div><br>
+            <div><a href="#">FAQ's</a></div><br>
+            <div><a href="#">Planners</a></div><br>
+            <div><a href="#">Size guide - Beds &</a></div>
+            <div><a href="#">mattresses</a></div><br>
+            <div><a href="#">Buying guides</a></div><br>
+            <div><a href="#">Gift Card</a></div><br>
+            <div><a href="#">Feedback</a></div><br>
+        </div>
+        <div class="about">
+            <h4>About IKEA</h4>
+            <div><a href="#">This is IKEA</a></div><br>
+            <div><a href="#">Working at IKEA</a></div><br>
+            <div><a href="#">Newsroom</a></div><br>
+            <div><a href="#">Sustainability</a></div><br>
+            <div><a href="#">IKEA Stores</a></div><br>
+            <div><a href="#">IKEA Restaurant</a></div><br>
+            <div><a href="#">IKEA for Business</a></div><br>
+            <div class="country">
+                <button><i class="fa-solid fa-globe"></i> Change country</button>
+            </div>
+        </div>
+    </div>
+    <div class="lastFooter">
+        <div>
+            <p>© Inter IKEA Systems B.V. 2000-2022</p></div>
+        <div class="links">
+            <div><a href="#">Privacy policy </a></div>
+            <div><a href="#">Cookie policy </a></div>
+            <div><a href="#">Cookie settings </a></div>
+            <div><a href="#">Terms and Conditions</a></div>
+        </div>
+    </div>
+</body>
+
+</html>

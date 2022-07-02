@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.ikea.com/in/en/static/ikea-logo.f7d9229f806b59ec64cb.svg" type="image/x-icon">
+    <title>SignUpIkea</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        
+        .ad{
+            margin:auto;
+            width: 90vw;
+            background-color: rgb(21, 91, 148);
+            color: white;
+            padding:30px;
+            margin-bottom: 30px;
+        }
+       .section{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 80px;
+       }
+        .sec1{
+            padding-left:20px;
+            padding-right:20px;
+            width: 30vw;
+        }
+        h1+p{
+            margin-bottom: 50px;
+        }
+        .pics{
+            padding-left:0px;
+            padding-right:0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            width: 400px;
+            
+        }
+        .pics.picKid{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .pics.picKid>img{
+            width: 100%;
+            
+           
+        }
+        img{
+            width: 170px;
+            object-fit: cover;
+            margin-bottom: 7px;
+        }
+
+        .sec2{
+            width: 70vw;
+            margin-left: 150px;
+            margin-right: 20px;
+            padding-left: 20px;
+            color: rgb(50, 37, 37);
+            
+        }
+        
+        
+        .submit{
+            width:90%;
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            
+            height: 70px;
+            border-radius: 12rem;
+            font-size: 18px;
+        }
+        h5,.gen{
+            padding-right: 40%;
+        }
+        .gen{
+            display: none;
+            font-size: 14px;
+        }
+        .inputBox{
+            position: relative;
+            margin-top: 30px;
+            
+        }
+        .inputBox input{
+            width: 100%;
+            padding:10px;
+            color: black;
+            letter-spacing: 1px;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+            background: transparent;
+        }
+        .inputBox label{
+            position: absolute;
+            top: 0px;
+            left:0px;
+            padding: 10px 0;
+            color: black;
+            transition: 0.5s;
+        }
+        .inputBox input:focus~label,
+        .inputBox input:valid~label{
+            top:-13px;
+            font-size: 12px;
+        } 
+        
+        
+        
+        .inputBox input:focus{
+            border-bottom: 2px solid rgb(6, 131, 194);
+        }
+
+
+        .submit:hover{
+            background-color: rgb(32, 29, 29);
+        }
+        .form-select, .form-select-sm{
+            margin-top: 15px;
+            outline: none;
+        }
+        .largerCheckbox {
+            transform : scale(1.5);
+        }
+
+        a{
+            
+            color: rgb(50, 37, 37);;
+        }
+        a:hover{
+            
+            color: rgb(0, 0, 0);;
+        }
+        .hm{
+            font-size: 12px;
+            color: rgb(255, 29, 29);
+            display: none;
+        }
+        input[type="radio"]{
+            accent-color: black;
+        }
+
+
+
+        @media only screen and (max-width: 770px){
+            .section{
+                flex-direction: column;
+            }
+            .sec2{
+            width: 90vw;
+            margin-left: 10px;
+            margin-right: 20px;
+            padding-left: 20px;
+            margin-top: 30px;
+        }
+
+        .sec1{
+           
+            width: 90vw;
+            margin-right: 3%;
+        }
+        img{
+            display: none;
+        }
+        .chotu{
+            display:block;
+            width: 100vw;
+            object-fit: cover;
+           
+        }
+        
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="ad">
+        <h1>Join the IKEA Family club and get Rs.500 off*.</h1>
+        <p>Get this limited period offer along with other benefits like guaranteed discounts, exclusive previews, food offers, free workshops & more. Its free & only takes a minute. *T&C apply.</p>
+    </div>
+
+    <div class="section">
+        <div class="sec1">
+            <h1>Create an IKEA Family Profile</h1>
+            <p>Already have an account? <a href="#">Login</a></p>
+
+            <div class="pics">
+
+                <div class="picKid">
+                    <img src="https://www.ikea.com/in/en/profile/da397fb7ef6e6d94257db1af77290435.jpg" height="250px">
+                    <img src="https://www.ikea.com/in/en/profile/281cff11b1bbb9d08737f5d656d7f8d6.jpg" height="200px">
+                    <img src="https://www.ikea.com/in/en/profile/a620cf6567e1d802e42dad2d419da1a1.jpg" height="200px">
+                    <img src="https://www.ikea.com/in/en/profile/558de95264a0f9501533593ab355259e.jpg" ">
+                </div>
+                
+
+                <div class="picKid">
+                        <img src="https://www.ikea.com/in/en/profile/5fdf8de127f0c602066c3aee7254c463.jpg" height="140px">
+                        <img src="https://www.ikea.com/in/en/profile/ddc28f908192eea06190ca5bf8657069.jpg" height="300px">
+                        <img src="https://www.ikea.com/in/en/profile/471c4b31a982119d5ad6018388835e64.jpg" height="200px">
+                        <img src="https://www.ikea.com/in/en/profile/3e48e8734c5c5751bd6b21045258bfac.jpg">
+                        <img class="chotu" src="https://www.ikea.com/in/en/profile/6c9a5b763c764348260c1831ee856f56.jpg" height="170px">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="sec2">
+            
+            <h5>Become a member of IKEA Family today. Did we mention it's free to join?</h5>
+            <input type="radio" class="largerCheckbox"><p style="display: inline-block;">&emsp;Yes, I want to enjoy Rs.500 off* & other benefits. Get the details.</p><br/>
+            <input type="radio" class="largerCheckbox"><p  style="display: inline-block; margin-bottom: 100px;">&emsp;Yes, I want to enjoy Rs.500 off* & other benefits.
+            Get the details.</p><br/>
+          
+
+           <div class="inputBox"><input type="text" id="name" onfocusout="myFunction()" autocomplete="off" required>
+            <label>Name</label>
+           </div>
+           <p class="hm name">Your first name is required.</p>
+
+           <div class="inputBox"><input type="text" id="lname" onfocusout="mYFunction()" autocomplete="off" required>
+            <label>Surname</label>
+           </div>
+           <p class="hm lname">Your last name is required.</p>
+
+           <div class="inputBox"><input type="tel" id="num" onfocusout="mFunction()" autocomplete="off" required>
+            <label>Number</label>
+           </div>
+           <p class="hm num">Your number is required.</p>
+
+           <div class="inputBox"><input type="text" id="bd" onfocusout="unction()" autocomplete="off" required>
+            <label>Birthdate</label>
+           </div>
+           <p class="hm bd">Your birthdate is required.</p>
+           <select id="sel" class="form-select form-select-sm" aria-label=".form-select-sm example" onfocusout="sel()">
+            <option selected>Gender</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">Other</option>
+          </select>
+          <p class="hm sel">Your gender is required.</p>
+            <p class="gen">We require this field in order to best personalize communication & marketing material and understand our users better.</p>
+            
+            <div class="inputBox"><input type="number" id="postal" onfocusout="postal()" autocomplete="off" required>
+                <label>Post Code</label>
+            </div>
+            <p class="hm postal">Your post code is required.</p>
+            
+            
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="store" onfocusout="store()">
+                <option selected>Preferred Store</option>
+                <option value="1">Hyderabad Store</option>
+                <option value="2">IKEA Bangalore</option>
+                <option value="3">Mumbai RCity</option>
+                <option value="4">Navi Mumbai Store</option>
+                <option value="5">Online Store</option>
+                <option value="6">Worli</option>
+              </select>
+              <p class="hm store">Your must select a store.</p>
+              
+            <div class="inputBox"><input type="email" id="mail" onfocusout="mail()" autocomplete="off" required >
+                <label>Email</label>
+            </div>
+            <p class="hm mail">Your email is required.</p>
+            <div class="inputBox"><input type="password" id="pass" onfocusout="pass()" autocomplete="off" required>
+                <label>Password</label>
+             </div>
+             <p class="hm pass">Your password is required.</p>
+            <input type="checkbox" checked="checked" class="largerCheckbox"><p style="display: inline-block;">&nbsp; I would like to receive news, tips and marketing offers from IKEA.</p><br/>
+            &emsp;<input type="checkbox" checked="checked" class="largerCheckbox"><p style="display: inline-block;">&nbsp; Via Email</p><br/>
+            &emsp;<input type="checkbox" checked="checked" class="largerCheckbox"><p style="display: inline-block;">&nbsp; Via SMS</p><br/>
+            &emsp;<input type="checkbox" checked="checked" class="largerCheckbox"><p style="display: inline-block;">&nbsp; Via direct mail</p><br/>
+
+            <input type="checkbox" class="largerCheckbox"><p style="display: inline-block;">&nbsp; I have read and understood the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.</p>
+
+            <button class="submit">Create Profile</button>
+            
+              
+            
+        </div>
+    </div>
+</body>
+</html>
+
+
+  <script>
+    function myFunction(){
+    var x = document.getElementById("name");
+    if(x.value==""){
+        document.querySelector(".name").style.display="flex";
+    }
+    else{
+        document.querySelector(".name").style.display="none";
+    }
+    }
+
+   
+    function mYFunction(){
+    var x = document.getElementById("lname");
+    if(x.value==""){
+        document.querySelector(".lname").style.display="flex";
+    }
+    else{
+        document.querySelector(".lname").style.display="none";
+    }
+    }
+
+
+    function mFunction(){
+    var x = document.getElementById("num");
+    if(x.value==""){
+        document.querySelector(".num").style.display="flex";
+    }
+    else{
+        document.querySelector(".num").style.display="none";
+    }
+    }
+
+    function unction(){
+    var x = document.getElementById("bd");
+    if(x.value==""){
+        document.querySelector(".bd").style.display="flex";
+    }
+    else{
+        document.querySelector(".bd").style.display="none";
+    }
+    }
+
+
+    function sel(){
+    var x = document.getElementById("sel");
+    if(x.value=="Gender"){
+        document.querySelector(".sel").style.display="flex";
+    }
+    else{
+        document.querySelector(".sel").style.display="none";
+        document.querySelector(".gen").style.display="flex";
+    }
+    }
+
+    function postal(){
+    var x = document.getElementById("postal");
+    if(x.value==""){
+        document.querySelector(".postal").style.display="flex";
+    }
+    else{
+        document.querySelector(".postal").style.display="none";
+    }
+    }
+
+    function store(){
+    var x = document.getElementById("store");
+    if(x.value=="Preferred Store"){
+        document.querySelector(".store").style.display="flex";
+    }
+    else{
+        document.querySelector(".store").style.display="none";
+    }
+    }
+
+    function mail(){
+    var x = document.getElementById("mail");
+    if(x.value==""){
+        document.querySelector(".mail").style.display="flex";
+    }
+    else{
+        document.querySelector(".mail").style.display="none";
+    }
+    }
+
+    function pass(){
+    var x = document.getElementById("pass");
+    if(x.value==""){
+        document.querySelector(".pass").style.display="flex";
+    }
+    else{
+        document.querySelector(".pass").style.display="none";
+    }
+    }
+
+
+
+document.querySelector(".submit").addEventListener("click",storeData);
+
+function storeData(){
+event.preventDefault();
+var name = document.getElementById("name").value;
+var surname= document.getElementById("lname").value;
+var email = document.getElementById("mail").value;
+var number = document.getElementById("num").value;
+var password = document.getElementById("pass").value;
+
+var formData = JSON.parse(localStorage.getItem('formData')) || [];
+
+var dataExist = formData.length &&
+                JSON.parse(localStorage.getItem('formData')).some(data =>
+                    data.name.toLowerCase() == name.toLowerCase() &&
+                    data.surname.toLowerCase() == surname.toLowerCase() &&
+                    data.email.toLowerCase() == email.toLowerCase() &&
+                    data.number == number &&
+                    data.password.toLowerCase() == password.toLowerCase());
+
+    if (!dataExist) {
+        formData.push({name,surname,email,number,password});
+        localStorage.setItem('formData', JSON.stringify(formData));
+        
+        document.getElementById('name').focus();
+        alert('Your account has been created\nPlease Sign in using the link below.');
+    }else{
+        alert('!!! You have already Signed Up !!!\nPlease login using your credentials')
+    }
+}
+  </script>

@@ -110,106 +110,119 @@ p{
     width: 300px;
 } 
 
-/* catergories */
+/* Slider Main */
+.sliderMain{
+    max-height: 700px;
+    border: 1px solid transparent;
+    margin: 100px 20px 100px 120px;
+  }
 
-.categories{
-    /* border: 1px solid red; as */
-    width: 90%;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: auto auto auto;
-    margin: 100px 120px;
-}
+  .slider{
+    display: flex;
+    margin-bottom: 100px;
+    overflow: auto;
+    padding-bottom: 30px;
+    cursor: grab;
+  }
+  .slider::-webkit-scrollbar{
+    height: 3px;
+    background: #dfdfdf;
+    border-radius: 4px;
+  }
+  .slider:hover::-webkit-scrollbar{
+    height: 5px;
+  }
+  .slider::-webkit-scrollbar-thumb{
+    width: 50px;
+    background-color: black;
 
-.categories img{
-    width: 380px;
-}
+  }
+  
+  .img-div {
+    width: 376px;
+    height: 640px;
+    position: relative;
+    margin-right: 25px;
+    cursor: pointer;
+  }
+  
+  .img-div img {
+    width: 376px;
+    
+  }
+  
+  .img-div h1 {
+    margin: 25px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: black;
+  }
+  
+  .img-div h1:hover {
+    text-decoration: underline;
+  }
+  
+  .img-div p {
+    margin: -10px 25px 25px 25px;
+    color: black;
+    font-weight: 400;
+  }
 
-.categories a{
-    text-decoration: none;
-}
+  .color1{
+    background-color: #555740;
+  }
 
-
-
-
-.category1{
-    background-color:#555740 ;
+  .color1 p{
     color: white;
-    width: 380px;
-    height: 680px;
-}
+  }
 
-.category1 h1{
-    padding: 0px 20px;
-}
-
-.category1 h1:hover{
-    text-decoration: underline;
-}
-
-
-.category1 p{
-    padding: 0px 20px;
+  .color1 h1{
     color: white;
-}
+  }
 
-.category1 i{
-    margin-top: 80px;
-    padding: 0px 20px;
-}
-
-.category2{
-    background-color:#D5C5C4 ;
+  .color2{
+    background-color: #d5c5c4;
     color: black;
-    width: 380px;
-    height: 680px;
-}
+  }
 
-.category2 h1{
-    padding: 0px 20px;
-    font-size: 30px;
-}
-
-.category2 h1:hover{
-    text-decoration: underline;
-}
-
-
-.category2 p{
-    padding: 0px 20px;
-    color: black;
-}
-
-.category2 i{
-    margin-top: 90px;
-    padding: 0px 20px;
-}
-
-.category3{
-    background-color:#F1BDB8;
-    color: black;
-    width: 380px;
-    height: 680px;
-}
-
-.category3 h1{
-    padding: 0px 20px;
-    font-size: 30px;
-}
-
-.category3 h1:hover{
-    text-decoration: underline;
-}
-
-.category3 p{
-    padding: 0px 20px;
-    color: black;
-}
-
-.category3 i{
-    margin-top: 90px;
-    padding: 0px 20px;
-}
+  .color3{
+    background-color: #f1bdb8;
+  }
+  .color4{
+    background-color: #666666;
+  }
+  .color5{
+    background-color: #8d6b5b;
+  }
+  .color6{
+    background-color: #d7aefe;
+  }
+  .color7{
+    background-color: #ffd800;
+  }
+  
+  .arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .arrow:hover {
+    background-color: white;
+  }
+  
+  .arrow img {
+    height: 25px;
+    width: 25px;
+  }
+  
 
 /* bangolore store */
 
@@ -255,6 +268,87 @@ p{
 .offer3{
     grid-column: 3;
 }
+
+.shop {
+    height: 450px;
+    margin: 100px 20px 100px 120px; 
+    cursor: grab;
+  }
+
+  .shop-list {
+    display: flex;
+    height: auto;
+    padding-bottom: 25px;
+    margin-top: 60px;
+    gap: 25px;
+    overflow-x: scroll;
+  }
+  .shop-list::-webkit-scrollbar{
+    height: 3px;
+    background: #dfdfdf;
+    border-radius: 4px;
+  }
+  .shop-list:hover::-webkit-scrollbar{
+    height: 5px;
+  }
+
+  .shop-list::-webkit-scrollbar-thumb{
+    width: 50px;
+    background-color: black;
+  }
+
+  #green {
+    text-decoration: none;
+  }
+  
+  .green {
+    width: 300px;
+  }
+  .green>div{
+    width: 40px;
+    height: 40px;
+  }
+  .green>div>img{
+    width: 25px;
+    height: 25px;
+  }
+  
+  .green h2 {
+    color: white;
+    padding-left: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    width: 80%;
+    margin-top: 40px;
+    margin-left: 32px;
+  }
+  
+  .shop-item {
+    height: 308px;
+    width: 231px;
+    border: 1px solid rgb(255, 255, 255);
+    position: relative;
+    background-color: #1e8449;
+    vertical-align: top;
+  }
+  
+  .shop-item img {
+    width: 231px; 
+    height: 308px;
+  }
+  
+  .shop-item button {
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    padding: 10px 16px;
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 30px;
+    background-color: white;
+    border: 1px solid black;
+  }
+  
 
 /* Download the Ikea app, Clearance sale */
 
